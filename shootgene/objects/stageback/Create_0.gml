@@ -1,19 +1,18 @@
 /// @description 説明をここに挿入
 // このエディターでコードを作成することができます
 players_amount = 10;
-global.seed = 9999999999;
+global.seed = int64(date_current_datetime());
 global.bullets = ds_list_create();
 generation = 1;
 self.alarm[0] = room_speed * 20;
 height = 900;
 window_set_size( (height/3)*4, height );
 players = [];
-
 for (i = 0; i < players_amount; i++){//初めの世代を配置する
 	xx = 300 + ixorshift(300);
 	yy = 300 + ixorshift(300);
 	players[i] = instance_create_layer(encx(xx), ency(yy), "player", playercollision);
-	for (ii = 0; ii < 512; ii++){
+	for (ii = 0; ii < 8; ii++){
 		for (iii = 0; iii < 512; iii++){
 			players[i].gene[ii][iii] = choose(0, 1, 2, 3, 4, 5, 6, 7);
 		}

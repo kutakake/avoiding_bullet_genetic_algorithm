@@ -1,7 +1,7 @@
 /// @description 説明をここに挿入
 // このエディターでコードを作成することができます
-for (i = 0; i < players_amount; i++){//hitcount(被弾数)が少ない順に個体をソート
-	for (ii = 0; ii < 4 - i; ii++){
+for (i = 0; i < players_amount; i++){//punishmentが少ない順に個体をソート
+	for (ii = 0; ii < players_amount - 1 - i; ii++){
 		if (players[ii].punishment > players[ii + 1].punishment){
 			buffer = players[ii];
 			players[ii] = players[ii + 1];
@@ -10,6 +10,21 @@ for (i = 0; i < players_amount; i++){//hitcount(被弾数)が少ない順に個�
 	}
 }
 
+players_sorted_by_hitcount = players;
+for (i = 0; i < players_amount; i++){//hitcount(被弾数)が少ない順に個体をソート
+	for (ii = 0; ii < players_amount - 1 - i; ii++){
+		if (players_sorted_by_hitcount[ii].hitcount > players_sorted_by_hitcount[ii + 1].hitcount){
+			buffer = players_sorted_by_hitcount[ii];
+			players_sorted_by_hitcount[ii] = players_sorted_by_hitcount[ii + 1];
+			players_sorted_by_hitcount[ii + 1] = buffer;
+		}
+	}
+}
+	hit_min = players_sorted_by_hitcount[0].hitcount;//被弾数の最小値
+	hit_min2 = players_sorted_by_hitcount[1].hitcount;//2番目
+	
+	hit_max = players_sorted_by_hitcount[players_amount - 1].hitcount;//被弾数の最大値
+	hit_max2 = players_sorted_by_hitcount[players_amount - 2].hitcount;//2番目
 
 
 good_ones = ds_list_create();

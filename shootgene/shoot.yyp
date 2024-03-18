@@ -29,11 +29,7 @@
     {"$GMFolder":"","%Name":"拡張機能","folderPath":"folders/拡張機能.yy","name":"拡張機能","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":"idea.txt","CopyToMask":-1,"filePath":"datafiles","name":"idea.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"item.txt","CopyToMask":-1,"filePath":"datafiles","name":"item.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"Japanese-paper07.jpg","CopyToMask":-1,"filePath":"datafiles","name":"Japanese-paper07.jpg","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"level6.png","CopyToMask":-1,"filePath":"datafiles","name":"level6.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"omake.txt","CopyToMask":-1,"filePath":"datafiles","name":"omake.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
